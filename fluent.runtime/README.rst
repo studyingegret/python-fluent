@@ -1,7 +1,3 @@
-About this fork
----------------
-An attempt to refactor fluent.runtime.
-
 fluent.runtime |fluent.runtime|
 ===============================
 
