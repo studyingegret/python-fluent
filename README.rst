@@ -4,7 +4,19 @@ An attempt to refactor fluent.runtime.
 
 Notes for whoever is interested in this fork:
 - Do not expect my commits to be logical. I am new to developing with GitHub and Git, it feels too distracting and unrealistic for me to commit & message in a way that the message *perfectly* describes the commit. So often(?) the commit messages only describe the **main** changes of the commit or **one or some of** the changes in the commit.
+
+  (Some people commit per file change (?), but it feels too verbose, and I feel I will likely make changes hard to summarize and end up saying very general messages like "Do one thing", "Change files a.py, b.txt" that way, which are too general to be really useful)
 - I am not sure if it is required to use my real name for Git commits. It seems that almost everyone else don't bother using their real name, but I would prefer to keep it secret (if possible).
+- Code will be rewritten if it feels unclear.
+
+<details>
+   <summary>Unresolved questions for refactoring</summary>
+
+- Is the project architecture designed to be same as fluent.js, fluent-rs? If so, do the classes correspond trivially?
+
+  Specifically, what does FluentLocalization correspond to?
+- Should I fix failing tests first? [TODO]...a60d717d450e156b39c3cad6931533dead295077
+</details>
 
 Project Fluent
 ==============

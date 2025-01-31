@@ -5,9 +5,9 @@
     "tasks": [
         {
             "label": "Test fluent.runtime",
-            "type": "process",
-            "command": "python",
-            "args": ["-m", "unittest", "discover", "fluent.runtime.tests"],
+            // type: shell uses virtual environment?
+            "type": "shell",
+            "command": ["python", "-m", "unittest", "discover", "-s", "fluent.runtime"],
             "group": "test",
             "presentation": {
                 "echo": true,
@@ -23,9 +23,8 @@
         },
         {
             "label": "Test fluent.syntax",
-            "type": "process",
-            "command": "python",
-            "args": ["-m", "unittest", "discover", "fluent.syntax.tests"],
+            "type": "shell",
+            "command": ["python", "-m", "unittest", "discover", "-s", "fluent.syntax"],
             "group": "test",
             "presentation": {
                 "echo": true,
@@ -41,9 +40,12 @@
         },
         {
             "label": "Test fluent.syntax and fluent.runtime",
-            "type": "process",
-            "command": "python",
-            "args": ["-m", "unittest", "discover", "fluent.syntax.tests"],
+            "type": "shell",
+            "command": "echo '# Test fluent.syntax'; echo '===================='; python -m unittest discover -s fluent.syntax; echo ''; echo '# Test fluent.runtime'; echo '====================='; python -m unittest discover -s fluent.runtime",
+            "windows": {
+                // Note: echo. creates empty line
+                "command": "echo # Test fluent.syntax & echo ==================== & python -m unittest discover -s fluent.syntax & echo. & echo # Test fluent.runtime & echo ===================== & python -m unittest discover -s fluent.runtime",
+            },
             "group": {"kind": "test", "isDefault": true},
             "presentation": {
                 "echo": true,
@@ -56,6 +58,20 @@
             "problemMatcher": [
                 "$python"
             ],
+        },
+        {
+            "label": "Where python",
+            "type": "shell",
+            "command": ["where", "python"],
+            "problemMatcher": [],
+            "presentation": {
+                "echo": true,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "dedicated",
+                "showReuseMessage": false,
+                "clear": true
+            },
         }
     ]
 }
