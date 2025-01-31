@@ -15,7 +15,62 @@ Notes for whoever is interested in this fork:
 - Is the project architecture designed to be same as fluent.js, fluent-rs? If so, do the classes correspond trivially?
 
   Specifically, what does FluentLocalization correspond to?
-- Should I fix failing tests first? [TODO]...a60d717d450e156b39c3cad6931533dead295077
+- Should I fix failing tests first? Saw these failures at 17dfdd4c (output of VS Code task "Test fluent.syntax and fluent.runtime") (Python 3.13.1)
+
+  .. code-block:: plain
+
+     # Test fluent.syntax
+     ====================
+     ........................................................................................................................................................................................................................................................................
+     ----------------------------------------------------------------------
+     Ran 264 tests in 0.189s
+
+     OK
+
+     # Test fluent.runtime
+     =====================
+     ....................................................................................................................................................E.F.F.D:\study-coding\python-fluent\fluent.runtime\fluent\runtime\types.py:361: UserWarning: FluentDateType option hour12 is not yet supported
+       warnings.warn(f"FluentDateType option {k} is not yet supported")
+     ................s...............
+     ======================================================================
+     ERROR: test_bundles (tests.test_fallback.TestLocalization.test_bundles)
+     ----------------------------------------------------------------------
+     Traceback (most recent call last):
+       File "D:\software\Python\Python313\Lib\unittest\mock.py", line 1424, in patched
+         return func(*newargs, **newkeywargs)
+       File "D:\study-coding\python-fluent\fluent.runtime\tests\test_fallback.py", line 34, in test_bundles
+         bundle_de = next(bundles_gen)
+     StopIteration
+
+     ======================================================================
+     FAIL: test_all_exist (tests.test_fallback.TestResourceLoader.test_all_exist)
+     ----------------------------------------------------------------------
+     Traceback (most recent call last):
+       File "D:\software\Python\Python313\Lib\unittest\mock.py", line 1424, in patched
+         return func(*newargs, **newkeywargs)
+       File "D:\study-coding\python-fluent\fluent.runtime\tests\test_fallback.py", line 64, in test_all_exist
+         self.assertEqual(len(resources_list), 1)
+         ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+     AssertionError: 0 != 1
+
+     ======================================================================
+     FAIL: test_one_exists (tests.test_fallback.TestResourceLoader.test_one_exists)
+     ----------------------------------------------------------------------
+     Traceback (most recent call last):
+       File "D:\software\Python\Python313\Lib\unittest\mock.py", line 1424, in patched
+         return func(*newargs, **newkeywargs)
+       File "D:\study-coding\python-fluent\fluent.runtime\tests\test_fallback.py", line 76, in test_one_exists
+         self.assertEqual(len(resources_list), 1)
+         ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+     AssertionError: 0 != 1
+
+     ----------------------------------------------------------------------
+     Ran 186 tests in 0.237s
+
+     FAILED (failures=2, errors=1, skipped=1)
+
+  However `the latest GitHub Actions test on original repo passed <https://github.com/projectfluent/python-fluent/actions/runs/10113936886/job/27971404861>`.
+
 </details>
 
 Project Fluent
