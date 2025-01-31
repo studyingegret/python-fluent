@@ -1,5 +1,3 @@
-# XXX: Will this break other people's develop workflow?
-#.*
 # ".*" -> ".*/**" fixes "!.vscode/tasks.json" negation not working
 # From https://git-scm.com/docs/gitignore:
 #   It is not possible to re-include a file if a parent directory of that file is excluded.
@@ -8,6 +6,7 @@
 /.venv
 # Opinionated include: .vscode/tasks.json can contain project-specific tasks that are useful to be remembered
 !/.vscode/tasks.json
+!/.github/**
 *.pyc
 *.egg-info/
 _build
