@@ -3,14 +3,20 @@ About this fork
 An attempt to refactor fluent.runtime.
 
 Notes for whoever is interested in this fork:
+
 - Do not expect my commits to be logical. I am new to developing with GitHub and Git, it feels too distracting and unrealistic for me to commit & message in a way that the message *perfectly* describes the commit. So often(?) the commit messages only describe the **main** changes of the commit or **one or some of** the changes in the commit.
 
   (Some people commit per file change (?), but it feels too verbose, and I feel I will likely make changes hard to summarize and end up saying very general messages like "Do one thing", "Change files a.py, b.txt" that way, which are too general to be really useful)
 - I am not sure if it is required to use my real name for Git commits. It seems that almost everyone else don't bother using their real name, but I would prefer to keep it secret (if possible).
 - Code will be rewritten if it feels unclear.
 
-<details>
-   <summary>Unresolved questions for refactoring</summary>
+::raw: html
+   <details><summary>
+
+Unresolved questions for refactoring
+
+::raw: html
+   </summary>
 
 - Is the project architecture designed to be same as fluent.js, fluent-rs? If so, do the classes correspond trivially?
 
@@ -69,9 +75,10 @@ Notes for whoever is interested in this fork:
 
      FAILED (failures=2, errors=1, skipped=1)
 
-  However `the latest GitHub Actions test on original repo passed <https://github.com/projectfluent/python-fluent/actions/runs/10113936886/job/27971404861>`.
+  However `the latest GitHub Actions test on original repo passed <https://github.com/projectfluent/python-fluent/actions/runs/10113936886/job/27971404861>`_.
 
-</details>
+::raw: html
+   </details>
 
 Project Fluent
 ==============
