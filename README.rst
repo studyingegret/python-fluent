@@ -10,12 +10,9 @@ Notes for whoever is interested in this fork:
 - I am not sure if it is required to use my real name for Git commits. It seems that almost everyone else don't bother using their real name, but I would prefer to keep it secret (if possible).
 - Code will be rewritten if it feels unclear.
 
-::raw: html
-   <details><summary>
+Unresolved questions for refactoring:
 
-Unresolved questions for refactoring
-
-::raw: html
+.. ::raw: html
    </summary>
 
 - Is the project architecture designed to be same as fluent.js, fluent-rs? If so, do the classes correspond trivially?
@@ -77,7 +74,7 @@ Unresolved questions for refactoring
 
   However `the latest GitHub Actions test on original repo passed <https://github.com/projectfluent/python-fluent/actions/runs/10113936886/job/27971404861>`_.
 
-::raw: html
+.. ::raw: html
    </details>
 
 Project Fluent
