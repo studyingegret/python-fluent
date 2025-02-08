@@ -4,6 +4,8 @@ An attempt to refactor fluent.runtime.
 
 Notes for whoever is interested in this fork:
 
+- *This section is really outdated, but I don't expect myself to have the time to update it soon.*
+
 - Do not expect my commits to be logical. I am new to developing with GitHub and Git, it feels too distracting and unrealistic for me to commit & message in a way that the message *perfectly* describes the commit. So often(?) the commit messages only describe the **main** changes of the commit or **one or some of** the changes in the commit.
 
   (Some people commit per file change (?), but it feels too verbose, and I feel I will likely make changes hard to summarize and end up saying very general messages like "Do one thing", "Change files a.py, b.txt" that way, which are too general to be really useful)
